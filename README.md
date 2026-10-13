@@ -49,3 +49,4 @@ Paket gratis penyedia AI mungkin memakai data untuk pelatihan, jadi anak diminta
 ## Lisensi font
 
 Fredoka dan Nunito berlisensi SIL OFL 1.1.
+"# codeplanet-kids" 
