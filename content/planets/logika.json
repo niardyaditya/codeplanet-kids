@@ -1,0 +1,62 @@
+{
+  "slug": "logika",
+  "urutan": 3,
+  "judul": "Planet Logika",
+  "tagline": "Robot memilih jalan: jika syaratnya benar, lakukan perintahnya.",
+  "warna": "#22C55E",
+  "art": "/art/planets-and-parts/planet-02-logic-green.svg",
+  "blokTersedia": ["maju", "kiri", "kanan", "ambil", "jika"],
+  "levels": [
+    {
+      "id": "logika-1",
+      "judul": "Ada Batu!",
+      "cerita": "Ada batu di depan Byte Cat. Dia tidak boleh menabraknya!",
+      "konsep": "Blok Jika memeriksa syarat. Jika syaratnya benar, hanya blok di bawahnya yang dijalankan. Jika salah, blok itu dilewati.",
+      "grid": { "w": 3, "h": 3, "start": { "x": 0, "y": 1, "dir": 1 }, "bintang": [{ "x": 2, "y": 0 }], "rintangan": [{ "x": 1, "y": 1 }] },
+      "kondisi": ["rintangan"],
+      "par": 7,
+      "maksBlok": 9,
+      "xp": 150,
+      "hint": [
+        "Ada batu di depan robot. Bagaimana kalau robot memutar dulu?",
+        "Blok Jika hanya menjalankan blok di bawahnya kalau syaratnya benar.",
+        "Jika batu di depan, Belok Kiri. Lalu jalan ke atas, belok kanan, dan jalan ke bintang."
+      ],
+      "solusi": [{ "tipe": "jika", "kondisi": "rintangan" }, { "tipe": "kiri" }, { "tipe": "maju" }, { "tipe": "kanan" }, { "tipe": "maju" }, { "tipe": "maju" }, { "tipe": "ambil" }]
+    },
+    {
+      "id": "logika-2",
+      "judul": "Putar Sebelum Batu",
+      "cerita": "Batu muncul di jalan lurus. Robot harus memutar lewat bawah.",
+      "konsep": "Jika syaratnya salah, robot tidak melakukan apa-apa. Itulah gunanya Jika.",
+      "grid": { "w": 5, "h": 3, "start": { "x": 0, "y": 0, "dir": 1 }, "bintang": [{ "x": 2, "y": 1 }], "rintangan": [{ "x": 1, "y": 0 }] },
+      "kondisi": ["rintangan"],
+      "par": 7,
+      "maksBlok": 9,
+      "xp": 160,
+      "hint": [
+        "Batu ada tepat di depan robot.",
+        "Jika batu di depan, robot menghadap bawah dulu.",
+        "Coba: Jika batu, Belok Kanan, Maju, Belok Kiri, Maju, Maju, Ambil."
+      ],
+      "solusi": [{ "tipe": "jika", "kondisi": "rintangan" }, { "tipe": "kanan" }, { "tipe": "maju" }, { "tipe": "kiri" }, { "tipe": "maju" }, { "tipe": "maju" }, { "tipe": "ambil" }]
+    },
+    {
+      "id": "logika-3",
+      "judul": "Ambil Kalau Ada",
+      "cerita": "Tidak semua kotak punya bintang. Ambil hanya kalau memang ada bintangnya!",
+      "konsep": "Blok Jika juga bisa mengecek bintang. Ambil di kotak kosong itu sia-sia, jadi cek dulu dengan Jika.",
+      "grid": { "w": 5, "h": 2, "start": { "x": 0, "y": 0, "dir": 1 }, "bintang": [{ "x": 1, "y": 0 }, { "x": 3, "y": 0 }], "rintangan": [] },
+      "kondisi": ["bintang"],
+      "par": 7,
+      "maksBlok": 9,
+      "xp": 170,
+      "hint": [
+        "Ada kotak kosong di antara dua bintang.",
+        "Blok Jika dengan syarat Ada bintang akan mengecek kotak sebelum Ambil.",
+        "Coba: Maju, Jika ada bintang, Ambil, Maju, Maju, Jika ada bintang, Ambil."
+      ],
+      "solusi": [{ "tipe": "maju" }, { "tipe": "jika", "kondisi": "bintang" }, { "tipe": "ambil" }, { "tipe": "maju" }, { "tipe": "maju" }, { "tipe": "jika", "kondisi": "bintang" }, { "tipe": "ambil" }]
+    }
+  ]
+}

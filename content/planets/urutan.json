@@ -1,0 +1,59 @@
+{
+  "slug": "urutan",
+  "urutan": 1,
+  "judul": "Planet Urutan",
+  "tagline": "Perintah dijalankan satu per satu, dari atas ke bawah.",
+  "warna": "#8B5CF6",
+  "art": "/art/planets-and-parts/planet-03-variable-purple.svg",
+  "blokTersedia": ["maju", "kiri", "kanan", "ambil"],
+  "levels": [
+    {
+      "id": "urutan-1",
+      "judul": "Langkah Pertama",
+      "cerita": "Byte Cat ingin mengambil bintang kecil di depannya. Susun perintah dari atas ke bawah!",
+      "konsep": "Komputer menjalankan perintah satu per satu. Setiap blok adalah satu langkah.",
+      "grid": { "w": 5, "h": 3, "start": { "x": 0, "y": 1, "dir": 1 }, "bintang": [{ "x": 2, "y": 1 }], "rintangan": [] },
+      "par": 3,
+      "maksBlok": 5,
+      "xp": 60,
+      "hint": [
+        "Bintang ada di baris tengah, dua langkah ke kanan.",
+        "Gunakan blok Maju dua kali, lalu blok Ambil.",
+        "Blok Ambil ditaruh setelah robot sampai di atas bintang."
+      ],
+      "solusi": [{ "tipe": "maju" }, { "tipe": "maju" }, { "tipe": "ambil" }]
+    },
+    {
+      "id": "urutan-2",
+      "judul": "Belok Dulu",
+      "cerita": "Bintangnya ada di pojok kanan bawah. Byte Cat harus berbelok dulu!",
+      "konsep": "Blok Belok Kanan mengubah arah robot. Robot selalu jalan ke arah yang sedang dihadapinya.",
+      "grid": { "w": 5, "h": 3, "start": { "x": 0, "y": 0, "dir": 1 }, "bintang": [{ "x": 2, "y": 2 }], "rintangan": [] },
+      "par": 6,
+      "maksBlok": 8,
+      "xp": 80,
+      "hint": [
+        "Robot awalnya menghadap kanan. Bintang ada di bawah.",
+        "Robot perlu menghadap ke bawah sebelum jalan ke bawah.",
+        "Coba urutan: Maju, Maju, Belok Kanan, Maju, Maju, Ambil."
+      ],
+      "solusi": [{ "tipe": "maju" }, { "tipe": "maju" }, { "tipe": "kanan" }, { "tipe": "maju" }, { "tipe": "maju" }, { "tipe": "ambil" }]
+    },
+    {
+      "id": "urutan-3",
+      "judul": "Dua Bintang",
+      "cerita": "Ada dua bintang di satu baris. Kumpulkan keduanya!",
+      "konsep": "Satu blok Ambil hanya mengambil satu bintang. Untuk bintang berikutnya, jalan lagi lalu ambil lagi.",
+      "grid": { "w": 5, "h": 3, "start": { "x": 0, "y": 1, "dir": 1 }, "bintang": [{ "x": 2, "y": 1 }, { "x": 4, "y": 1 }], "rintangan": [] },
+      "par": 6,
+      "maksBlok": 8,
+      "xp": 90,
+      "hint": [
+        "Ada dua bintang di baris yang sama.",
+        "Ambil bintang pertama dulu, lalu jalan lagi.",
+        "Setiap bintang butuh satu blok Ambil."
+      ],
+      "solusi": [{ "tipe": "maju" }, { "tipe": "maju" }, { "tipe": "ambil" }, { "tipe": "maju" }, { "tipe": "maju" }, { "tipe": "ambil" }]
+    }
+  ]
+}

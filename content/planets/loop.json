@@ -1,0 +1,59 @@
+{
+  "slug": "loop",
+  "urutan": 2,
+  "judul": "Planet Loop",
+  "tagline": "Satu perintah bisa diulang berkali-kali.",
+  "warna": "#FB923C",
+  "art": "/art/planets-and-parts/planet-01-loop-orange.svg",
+  "blokTersedia": ["maju", "kiri", "kanan", "ambil", "ulangi"],
+  "levels": [
+    {
+      "id": "loop-1",
+      "judul": "Ulangi Tiga Kali",
+      "cerita": "Bintang ada tiga langkah di depan. Jangan menulis Maju tiga kali, pakai Ulangi saja!",
+      "konsep": "Blok Ulangi mengulang blok di bawahnya sebanyak angka yang kamu pilih. Ketuk angkanya untuk mengubah.",
+      "grid": { "w": 5, "h": 3, "start": { "x": 0, "y": 1, "dir": 1 }, "bintang": [{ "x": 3, "y": 1 }], "rintangan": [] },
+      "par": 3,
+      "maksBlok": 4,
+      "xp": 100,
+      "hint": [
+        "Maju tiga langkah bisa diringkas dengan Ulangi.",
+        "Ketuk angka di blok Ulangi untuk mengubah jumlahnya.",
+        "Susun: Ulangi 3x, lalu Maju, lalu Ambil."
+      ],
+      "solusi": [{ "tipe": "ulangi", "n": 3 }, { "tipe": "maju" }, { "tipe": "ambil" }]
+    },
+    {
+      "id": "loop-2",
+      "judul": "Turun Lewat Ulangi",
+      "cerita": "Robot harus turun ke bawah. Gabungkan Belok dan Ulangi!",
+      "konsep": "Ulangi juga bisa dipakai setelah belok. Robot yang sudah menghadap bawah akan jalan ke bawah.",
+      "grid": { "w": 5, "h": 3, "start": { "x": 0, "y": 0, "dir": 1 }, "bintang": [{ "x": 2, "y": 2 }], "rintangan": [] },
+      "par": 6,
+      "maksBlok": 8,
+      "xp": 110,
+      "hint": [
+        "Robot harus jalan dua kali ke kanan, lalu belok ke bawah.",
+        "Setelah belok bawah, dua langkah ke bawah bisa pakai Ulangi.",
+        "Coba: Maju, Maju, Belok Kanan, Ulangi 2x, Maju, Ambil."
+      ],
+      "solusi": [{ "tipe": "maju" }, { "tipe": "maju" }, { "tipe": "kanan" }, { "tipe": "ulangi", "n": 2 }, { "tipe": "maju" }, { "tipe": "ambil" }]
+    },
+    {
+      "id": "loop-3",
+      "judul": "Dua Panggilan Ulangi",
+      "cerita": "Dua bintang ada di sudut kanan. Pakai Ulangi dua kali dengan jumlah berbeda!",
+      "konsep": "Satu program boleh punya beberapa blok Ulangi. Setiap Ulangi punya angkanya sendiri.",
+      "grid": { "w": 5, "h": 3, "start": { "x": 0, "y": 0, "dir": 1 }, "bintang": [{ "x": 4, "y": 0 }, { "x": 4, "y": 2 }], "rintangan": [] },
+      "par": 7,
+      "maksBlok": 9,
+      "xp": 130,
+      "hint": [
+        "Bintang pertama ada di ujung baris atas.",
+        "Setelah ambil bintang pertama, belok kanan dan jalan ke bawah.",
+        "Coba: Ulangi 4x, Maju, Ambil, Belok Kanan, Ulangi 2x, Maju, Ambil."
+      ],
+      "solusi": [{ "tipe": "ulangi", "n": 4 }, { "tipe": "maju" }, { "tipe": "ambil" }, { "tipe": "kanan" }, { "tipe": "ulangi", "n": 2 }, { "tipe": "maju" }, { "tipe": "ambil" }]
+    }
+  ]
+}
